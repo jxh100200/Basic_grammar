@@ -1,0 +1,66 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+###데이터의 종류 
+변수: var_  
+상수: const_  
+값: data  
+```{r}
+var.a <- 1
+var.b <- 2
+var.a+var.b
+```
+
+###함수의 종류
+#####c()숫자타입의 백터를 생성
+
+```{r}
+vec.a <- c(1,2,5,7,8)
+vec.a
+vec.b <- c(1:5)
+vec.c <- seq(2,10,by=2)
+vec.c
+vec.b+vec.c
+```
+#####c()문자타입의 백터를 생성
+```{r}
+var.a <-c("hello","world","is","good!!")
+var.a
+```
+
+####scalar 
+
+>스칼라(영어: scalar 스케일러[*])란 크기만 있고 방향을 가지지 않는 양을 말한다
+[위키백과](https://ko.wikipedia.org/wiki/%EC%8A%A4%EC%B9%BC%EB%9D%BC_(%EC%88%98%ED%95%99))
+
+####vector
+>벡터(vector)는 방향과 크기의 의미를 모두 포함하는 표현 도구
+
+#### dataframe
+>row(case,대상하나의정보)과 column(var+data)로 구성된 표 
+
+
+
+```{r}
+vec.name <- c("김지훈","이유진","박동현","김민지")
+vec.name
+vec.eng <- c(90,80,60,70)
+vec.eng
+vec.match <- c(50,60,100,20)
+vec.match
+vec.class <- c(1,1,2,2)
+vec.class
+
+```
+
+
+
+
+
+
+
+
+
+
+

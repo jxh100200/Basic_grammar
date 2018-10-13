@@ -1,0 +1,75 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+ggplot2에 내장된 샘풀데이터 mpg 정형ㅎ
+```{r}
+#package
+
+library(ggplot2) # 이 파일로 불러오는 것 
+df.mpg <- as.data.frame(ggplot2::mpg)
+head(mpg)
+
+## 4대함수:: head,tail, str,summary
+head(df.mpg)
+tail(df.mpg)
+str(df.mpg)
+summary(df.mpg)
+# 'data.frame':	234 obs. of  11 variables:
+#   $ manufacturer(제조 회사): chr  "audi" "audi" "audi" "audi" ...
+# $ model (자동차모델명)      : chr  "a4" "a4" "a4" "a4" ...
+# $ displ (배기량)      : num  1.8 1.8 2 2 2.8 2.8 3.1 1.8 1.8 2 ...
+# $ year  (생산연도)      : int  1999 1999 2008 2008 1999 1999 2008 1999 1999 2008 ...
+# $ cyl    (실린더개수)     : int  4 4 4 4 6 6 6 4 4 4 ...
+# $ trans (변속기종류)      : chr  "auto(l5)" "manual(m5)" "manual(m6)" "auto(av)" ...
+# $ drv   (구동방식)      : chr  "f" "f" "f" "f" ...
+# $ cty   (도시연비)      : int  18 21 20 21 16 18 18 18 16 20 ...
+# $ hwy     (고속도로연비)    : int  29 29 31 30 26 26 27 26 25 28 ...
+# $ fl       (연료종류)   : chr  "p" "p" "p" "p" ...
+# $ class  (자동차종류)     : chr  "compact" "compact" "compact" "compact" ...
+
+summary(df.score)
+# manufacturer          model               displ      
+# Length:234         Length:234         Min.   :1.600  
+# Class :character   Class :character   1st Qu.:2.400  
+# Mode  :character   Mode  :character   Median :3.300  
+# Mean   :3.472  
+# 3rd Qu.:4.600  
+# Max.   :7.000  
+# year           cyl           trans          
+# Min.   :1999   Min.   :4.000   Length:234        
+# 1st Qu.:1999   1st Qu.:4.000   Class :character  
+# Median :2004   Median :6.000   Mode  :character  
+# Mean   :2004   Mean   :5.889                     
+# 3rd Qu.:2008   3rd Qu.:8.000                     
+# Max.   :2008   Max.   :8.000                     
+# drv                 cty             hwy       
+# Length:234         Min.   : 9.00   Min.   :12.00  
+# Class :character   1st Qu.:14.00   1st Qu.:18.00  
+# Mode  :character   Median :17.00   Median :24.00  
+# Mean   :16.86   Mean   :23.44  
+# 3rd Qu.:19.00   3rd Qu.:27.00  
+# Max.   :35.00   Max.   :44.00  
+# fl               class          
+# Length:234         Length:234        
+# Class :character   Class :character  
+# Mode  :character   Mode  :character  
+
+
+library(ggplot2)
+library(dplyr) 
+library(data.table)
+df.mpg <- as.data.frame(ggplot2::mpg)
+str(df.mpg)
+head(df.mpg)
+df.mpg %>% 
+  data.table::setnames(
+    old = "class",
+    new = "자동차종류"
+  )
+df.mpg
+```
+
+
